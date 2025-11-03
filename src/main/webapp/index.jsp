@@ -2,45 +2,75 @@
 <html>
 <head>
   <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    form {
+      width: 350px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: 48%;
+      margin-top: 15px;
+      padding: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h2>Student Registration Form</h2>
-  
+
+  <h2 style="text-align:center;">Student Registration Form</h2>
+
   <form>
-    <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname" required><br><br>
-    
-    <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname" required><br><br>
-    
-    <label for="gender">Gender:</label>
-    <input type="radio" id="male" name="gender" value="Male"> Male
-    <input type="radio" id="female" name="gender" value="Female"> Female<br><br>
-    
-    <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob" required><br><br>
-    
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-    
+    <input type="email" id="email" name="email" required>
+
     <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required><br><br>
-    
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">--Select--</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
     <label for="course">Course:</label>
-    <select id="course" name="course">
-      <option value="bsc">B.Sc</option>
-      <option value="bcom">B.Com</option>
-      <option value="ba">B.A</option>
-      <option value="btech">B.Tech</option>
-    </select><br><br>
-    
-    <label for="address">Address:</label><br>
-    <textarea id="address" name="address" rows="3" cols="30"></textarea><br><br>
-    
-    <input type="submit" value="Register">
-    <input type="reset" value="Reset">
+    <select id="course" name="course" required>
+      <option value="">--Select--</option>
+      <option>B.Sc</option>
+      <option>B.Com</option>
+      <option>B.Tech</option>
+      <option>B.A</option>
+    </select>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3"></textarea>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
   </form>
 
 </body>
 </html>
-
